@@ -1,0 +1,15 @@
+A few things:
+taking example of the Dear Imgui library along with the glfw and opengl3 bindings:
+
+1: Head over to the vcpkg installation directory and run : 
+./vcpkg install imgui[opengl3-binding]
+
+Drop looking at the installed directory in your vcpkg installation directory,
+from now on all the include file and relevant package that you need to import in visual studio will be from : 
+
+
+VERY VERY CRUCIAL
+D:/software projects/vcpkg/packages/
+
+
+
