@@ -10,5 +10,5 @@ I made an insightful tutorial video on it, which can be viewed here :
 
 
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=T4IFzJPkfMg" target="_blank">
-<img src="http://img.youtube.com/vi/T4IFzJPkfMg/0.jpg" alt="Dear Imgui setup in visual studio using glfw and opengl3 bindings." width="500" height="400" border="10" /></a>
+
+<iframe width="1257" height="707" src="https://www.youtube.com/embed/T4IFzJPkfMg" title="Setting up a Visual Studio Project for Dear Imgui with opengl and glfw bindings." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
