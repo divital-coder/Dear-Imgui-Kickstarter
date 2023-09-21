@@ -31,24 +31,24 @@ Installation
 
 Library Linkage and setup
 Using the "DearImgui" library example along with the "opengl3" and "glfw" bindings.
-NOTE: opengl resides in a library "glad", which is what was installed using the vcpkg pkg manager.
+NOTE: open requires some functions that resides in a library  called "glad", which is what was installed using the vcpkg pkg manager.
 --firstly, create an emtpy visual studio project and navigate the project properties by right clicking.
 --the things we have to tinker with in the properties window, require the access to "LINKER" and "VC++" section from the left pane.
 
 *LINKER SECTION:
 --in the left pane, underneath the linker section, have "input" selected
 --navigate to the newly opened right pane, and add entries to the area labelled with "Additional Dependencies" with the names of the libraries you intend upon using in your project.
---in this case, the names of the libraries we are including are (glad.lib imgui.lib glfw3dll.lib)
-NOTE: If unsure, about the libraries to be used, navigate to (D:/software projects/vcpkg/installed/x86-windows/lib) and check out the relevant libraries to list.
-Path for this section : (project->properties->linker->input->Additional Dependencies:[imgui.lib glad.lib glfw3dll.lib])
+--in this case, the names of the libraries we are including areimgui.lib glfw3dll.lib glad.lib)
+NOTE: If unsure, about the libraries to be used, navigate to (D:/software projects/vcpkpackages/imgui_x86-windows/lib) and check out the relevant libraries to list.
+Path for this section : (project->properties->linker->input->Additional Dependencies:[imgui.l glfw3dll.lib glad.lib])
 
 --after having the work done under the "Input" tab, navigate to the "General" tab from the left pane under the "LINKER".
 --after having the "General" tab selected, select "Additional Libraries Dependencies" from the right pane.
---under the "Additional Libraries Dependencies", list down the path of the libraries from the vcpkg installation directory.
---for our case, the path will look like (D:/software projects/vcpkg/installed/x86-windows/lib/imgui.lib)
-                                        (D:/software projects/vcpkg/installed/x86-windows/lib/glfw3dll.lib)
-                                        (D:/software projects/vcpkg/installed/x86-windows/glad.lib)
-Path for this section : (project->properties->linker->general->Additional Libraries Dependencies: [D:/software projects/vcpks/installed/x86-windows/lib/imgui.lib])
+--under the "Additional Libraries Dependencies", list down the path of the libraries from the vcpkg "packages" directory.
+--for our case, the path will look like (D:/software projects/vcpkg/packages/imgui_x86-windows/lib/imgui.lib)
+                                        (D:/software projects/vcpkg/packages/glfw3_x86-windows/lib/glfw3dll.lib)
+                                        (D:/software projects/vcpkg/packages/glad_x86-windows/glad.lib)
+Path for this section : (project->properties->linker->general->Additional Libraries Dependencies: [D:/software projects/vcpkg/packages/imgui_x86-windows/lib/imgui.lib]     )
 LINKER SECTION DONE
 
 
@@ -56,9 +56,12 @@ LINKER SECTION DONE
 *CONFIGURATION PROPERTIES SECTION
 --under the configuration properties section under project properties in visual studio, navigate to the "VC++ Directories" , from the left pane.
 --In the newly opened right pane, select "Include Directories" and add the path of the "include" dir from the vcpkg installed directory.
-NOTE : the include directory resides with in the vcpkg "installed" directory under the "x86-windows" directory, since u have 32 bit libs installed.
-NOTE:  only the path to the include directory is needed to be added under the "Include Directries" under "VC++ Directories", and not for each indvidual header or c++ files.
-Path for this section : (projec->properties->configuration properties->VC++ Directorie-> Include Directories : [D:/software projects/vcpkg/installed/x86-windows/include])
+NOTE : the include directory resides with in the vcpkg "packages" directory under the "packagename_x86-windows" directory, since u have 32 bit libs installed.
+NOTE:  the include path for each invidual package installed is needed to be listed here, as  "d:/software projects/vcpkg/packages/pkgname_x86-windows/include" 
+Path for this section : (project->properties->configuration properties->VC++ Directories-> Include Directories : [D:/software projects/vcpkg/packages/imgui_x86-windows/include]) 
+                                                                                                                  D:/software projects/vcpkg/packages/glfw3_x86-windows/include
+                                                                                                                  D:/software projects/vcpkg/packages/glad_x86-windows/include
+                                                                                                                  
 Configuration Properties Section DONE
 
 
