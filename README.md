@@ -11,3 +11,6 @@ I made an insightful tutorial video on it, which can be viewed here :
 
 
 [![Setting up a Visual Studio Project for Dear Imgui with opengl and glfw bindings.](http://img.youtube.com/vi/T4IFzJPkfMg/0.jpg)](http://www.youtube.com/watch?v=T4IFzJPkfMg)
+
+
+<a href="https://youtu.be/T4IFzJPkfMg">https://youtu.be/T4IFzJPkfMg</a>
